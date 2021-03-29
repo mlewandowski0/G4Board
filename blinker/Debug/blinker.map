@@ -2192,9 +2192,8 @@ LOAD /opt/st/stm32cubeide_1.6.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
  .text.main     0x0000000008000218       0x28 Core/Src/main.o
                 0x0000000008000218                main
  .text.SystemClock_Config
-                0x0000000008000240       0x96 Core/Src/main.o
+                0x0000000008000240       0x98 Core/Src/main.o
                 0x0000000008000240                SystemClock_Config
- *fill*         0x00000000080002d6        0x2 
  .text.MX_GPIO_Init
                 0x00000000080002d8       0x98 Core/Src/main.o
  .text.Error_Handler
