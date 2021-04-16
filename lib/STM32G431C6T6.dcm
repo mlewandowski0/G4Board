@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP STM32G431C6T6
-D ARM Microcontrollers - MCU
-K
-F https://componentsearchengine.com/Datasheets/1/STM32G431C6T6.pdf
-$ENDCMP
-#
-#End Doc Library

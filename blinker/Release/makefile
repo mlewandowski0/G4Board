@@ -61,8 +61,8 @@ all: main-build
 main-build: blinker.elf secondary-outputs
 
 # Tool invocations
-blinker.elf: $(OBJS) $(USER_OBJS) /home/acze/Desktop/PROJS/G4Board/blinker/STM32G431C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "blinker.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/acze/Desktop/PROJS/G4Board/blinker/STM32G431C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blinker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+blinker.elf: $(OBJS) $(USER_OBJS) C:\Users\levus\Desktop\PROJS\G4Board\blinker\STM32G431C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "blinker.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\levus\Desktop\PROJS\G4Board\blinker\STM32G431C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blinker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

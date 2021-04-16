@@ -287,7 +287,7 @@ Disassembly of section .text:
  80003fa:	d8ee      	bhi.n	80003da <HAL_InitTick+0xa>
  80003fc:	4602      	mov	r2, r0
  80003fe:	4629      	mov	r1, r5
- 8000400:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
+ 8000400:	f04f 30ff 	mov.w	r0, #4294967295
  8000404:	f000 f852 	bl	80004ac <HAL_NVIC_SetPriority>
  8000408:	4b03      	ldr	r3, [pc, #12]	; (8000418 <HAL_InitTick+0x48>)
  800040a:	4620      	mov	r0, r4
@@ -376,7 +376,7 @@ Disassembly of section .text:
  80004be:	bf28      	it	cs
  80004c0:	2504      	movcs	r5, #4
  80004c2:	2b06      	cmp	r3, #6
- 80004c4:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+ 80004c4:	f04f 33ff 	mov.w	r3, #4294967295
  80004c8:	bf8c      	ite	hi
  80004ca:	3c03      	subhi	r4, #3
  80004cc:	2400      	movls	r4, #0
@@ -441,7 +441,7 @@ Disassembly of section .text:
  8000568:	f025 0a10 	bic.w	sl, r5, #16
  800056c:	ea4f 0e43 	mov.w	lr, r3, lsl #1
  8000570:	2603      	movs	r6, #3
- 8000572:	f10a 37ff 	add.w	r7, sl, #4294967295	; 0xffffffff
+ 8000572:	f10a 37ff 	add.w	r7, sl, #4294967295
  8000576:	fa06 f60e 	lsl.w	r6, r6, lr
  800057a:	2f01      	cmp	r7, #1
  800057c:	ea6f 0606 	mvn.w	r6, r6

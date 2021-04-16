@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001b1b4  00000000  00000000  00027230  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00005697  00000000  00000000  000423e4  2**0
+ 17 .debug_line   000057db  00000000  00000000  000423e4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000ab370  00000000  00000000  00047a7b  2**0
+ 18 .debug_str    000ab374  00000000  00000000  00047bbf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000f2deb  2**0
+ 19 .comment      00000053  00000000  00000000  000f2f33  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00001424  00000000  00000000  000f2e40  2**2
+ 20 .debug_frame  00001424  00000000  00000000  000f2f88  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -797,7 +797,7 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
         HAL_NVIC_SetPriority(SysTick_IRQn, TickPriority, 0U);
  8000502:	2200      	movs	r2, #0
  8000504:	6879      	ldr	r1, [r7, #4]
- 8000506:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
+ 8000506:	f04f 30ff 	mov.w	r0, #4294967295
  800050a:	f000 f914 	bl	8000736 <HAL_NVIC_SetPriority>
         uwTickPrio = TickPriority;
  800050e:	4a0a      	ldr	r2, [pc, #40]	; (8000538 <HAL_InitTick+0x70>)
@@ -906,7 +906,7 @@ __weak void HAL_Delay(uint32_t Delay)
   /* Add a freq to guarantee minimum wait */
   if (wait < HAL_MAX_DELAY)
  800058a:	68fb      	ldr	r3, [r7, #12]
- 800058c:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+ 800058c:	f1b3 3fff 	cmp.w	r3, #4294967295
  8000590:	d004      	beq.n	800059c <HAL_Delay+0x24>
   {
     wait += (uint32_t)(uwTickFreq);
@@ -1101,7 +1101,7 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
 
   return (
            ((PreemptPriority & (uint32_t)((1UL << (PreemptPriorityBits)) - 1UL)) << SubPriorityBits) |
- 80006a8:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+ 80006a8:	f04f 32ff 	mov.w	r2, #4294967295
  80006ac:	69bb      	ldr	r3, [r7, #24]
  80006ae:	fa02 f303 	lsl.w	r3, r2, r3
  80006b2:	43da      	mvns	r2, r3
@@ -1110,7 +1110,7 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
  80006b8:	697b      	ldr	r3, [r7, #20]
  80006ba:	409a      	lsls	r2, r3
            ((SubPriority     & (uint32_t)((1UL << (SubPriorityBits    )) - 1UL)))
- 80006bc:	f04f 31ff 	mov.w	r1, #4294967295	; 0xffffffff
+ 80006bc:	f04f 31ff 	mov.w	r1, #4294967295
  80006c0:	697b      	ldr	r3, [r7, #20]
  80006c2:	fa01 f303 	lsl.w	r3, r1, r3
  80006c6:	43d9      	mvns	r1, r3
@@ -1156,7 +1156,7 @@ __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
  80006f8:	6053      	str	r3, [r2, #4]
   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
  80006fa:	210f      	movs	r1, #15
- 80006fc:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
+ 80006fc:	f04f 30ff 	mov.w	r0, #4294967295
  8000700:	f7ff ff8e 	bl	8000620 <__NVIC_SetPriority>
   SysTick->VAL   = 0UL;                                             /* Load the SysTick Counter Value */
  8000704:	4b05      	ldr	r3, [pc, #20]	; (800071c <SysTick_Config+0x40>)
